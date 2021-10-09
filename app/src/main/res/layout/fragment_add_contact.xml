@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.addcontact.AddContactFragment">
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       app:cardCornerRadius="35sp"
+       android:elevation="50dp"
+       android:layout_marginTop="20dp"
+       android:id="@+id/card_view1">
+
+       <ImageView
+           android:id="@+id/contact_img"
+           android:layout_width="150dp"
+           android:layout_height="150dp"
+           android:src="@drawable/default_contact" />
+
+   </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_add_img"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/menu_add_img"
+        android:textAlignment="center"
+        android:textColor="@color/gold"
+        android:textStyle="bold" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_add_img"
+        android:layout_marginTop="20dp"
+        android:background="@color/mytint">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/mytint">
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:hint="Enter firstname"
+                android:paddingStart="10dp" />
+
+            <EditText
+                android:id="@+id/edt_company"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/edt_name"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_company"
+                android:drawablePadding="20dp"
+                android:hint="Enter Company"
+                android:paddingStart="10dp" />
+
+            <EditText
+                android:id="@+id/edt_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/edt_company"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_number"
+                android:drawablePadding="20dp"
+                android:hint="Enter Number"
+                android:paddingStart="10dp" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/edt_number"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="20dp"
+                android:hint="Enter Email"
+                android:paddingStart="10dp" />
+
+            <EditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/edt_email"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="20dp"
+                android:hint="Enter Address"
+                android:paddingStart="10dp" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/edt_address"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_input"
+                android:text="@string/menu_add_contact" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btn_add"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_input"
+                android:text="@string/menu_cancel" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
