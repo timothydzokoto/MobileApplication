@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/custom_background.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/drawable/custom_backgrounds.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/drawable/custom_input.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/drawable/custom_styles.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/drawable/ic_contacts.xml" value="0.2296875" />
         <entry key="app/src/main/res/drawable/ic_exit.xml" value="0.2296875" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2296875" />
@@ -12,6 +15,7 @@
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2296875" />
         <entry key="app/src/main/res/drawable/ic_plus.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2296875" />
+        <entry key="app/src/main/res/font/.xml" value="0.1328125" />
         <entry key="app/src/main/res/font/bravery.xml" value="0.24375" />
         <entry key="app/src/main/res/font/first_font.xml" value="0.24375" />
         <entry key="app/src/main/res/font/galada.xml" value="0.24375" />
@@ -37,5 +41,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2140625" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -16,6 +16,9 @@
     <string name="menu_add_img">Add Image</string>
     <string name="menu_add_contact">Add Contact</string>
     <string name="menu_cancel">Cancel</string>
+    <string name="text_dashboard">Dashboard</string>
+    <string name="text_prompt_yes">Yes</string>
+    <string name="text_prompt_no">No</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

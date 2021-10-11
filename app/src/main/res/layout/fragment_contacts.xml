@@ -8,11 +8,8 @@
 
     <EditText
         android:id="@+id/edt_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_search"
-        android:hint="@string/menu_add_contact"
-        android:background="@drawable/custom_input"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

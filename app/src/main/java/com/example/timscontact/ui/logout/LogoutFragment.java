@@ -35,4 +35,5 @@ public class LogoutFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+
 }

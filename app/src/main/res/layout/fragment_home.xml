@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/custom_background"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
@@ -11,12 +12,155 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="@string/text_dashboard"
+        android:textStyle="bold"
+        android:textColor="@color/gold"
+        android:layout_margin="5dp"
+        android:textSize="30sp"
+        android:fontFamily="@font/bangers"
+        />
+
+<!--    <GridLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@id/text_home"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:columnCount="2"-->
+<!--        android:rowCount="2">-->
+
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_view1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="fill"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_column="0"-->
+<!--            app:cardElevation="8dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical|center_horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_home"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/menu_home"-->
+<!--                    android:textColor="@color/black"/>-->
+
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_view2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="fill"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_column="1"-->
+<!--            app:cardElevation="8dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical|center_horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_home"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/menu_home"-->
+<!--                    android:textColor="@color/black"/>-->
+
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_view3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="fill"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_row="1"-->
+<!--            android:layout_column="0"-->
+<!--            app:cardElevation="8dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical|center_horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_home"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/menu_home"-->
+<!--                    android:textColor="@color/black"/>-->
+
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_view4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="fill"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_row="1"-->
+<!--            android:layout_column="1"-->
+<!--            app:cardElevation="8dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical|center_horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_home"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/menu_home"-->
+<!--                    android:textColor="@color/black"/>-->
+
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--    </GridLayout>-->
+</RelativeLayout>

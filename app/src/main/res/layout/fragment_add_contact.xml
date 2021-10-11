@@ -59,6 +59,7 @@
                 android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="20dp"
+                android:inputType="text"
                 android:ems="10"
                 android:hint="Enter firstname"
                 android:paddingStart="10dp" />
@@ -69,6 +70,7 @@
                 android:layout_height="50dp"
                 android:layout_below="@+id/edt_name"
                 android:layout_marginTop="10dp"
+                android:inputType="text"
                 android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_company"
                 android:drawablePadding="20dp"
@@ -84,6 +86,7 @@
                 android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_number"
                 android:drawablePadding="20dp"
+                android:inputType="phone"
                 android:hint="Enter Number"
                 android:paddingStart="10dp" />
 
@@ -94,6 +97,7 @@
                 android:layout_below="@+id/edt_number"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custom_input"
+                android:inputType="textEmailAddress"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="20dp"
                 android:hint="Enter Email"
@@ -107,6 +111,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_location"
+                android:inputType="text"
                 android:drawablePadding="20dp"
                 android:hint="Enter Address"
                 android:paddingStart="10dp" />

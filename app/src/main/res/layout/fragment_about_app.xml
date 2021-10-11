@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.aboutapp.AboutAppFragment">
+    tools:context=".ui.logout.LogoutFragment"
+    android:background="@drawable/custom_backgrounds">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:text="Hello" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="306dp"
+        android:layout_height="605dp"
+        android:layout_margin="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="326dp"
+            android:src="@drawable/img0" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bangers"
+            android:text="Tim's Contact Application"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="More Fonts..."
+            android:text="This contact manager app is a smart address book, that will help you to keep your contacts in one place. This smart contact book app can be synchronized with your contact list and every new added contact will automatically be synchronized with this smart contact book app for an easy contact backup and recovery."
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developed by Timothy"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
 package com.example.timscontact.ui.contacts;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
 import com.example.timscontact.PrefConfig;
@@ -28,6 +31,7 @@ public class ContactsFragment extends Fragment {
     private ContactAdapter contactAdapter;
     private RecyclerView recyclerView;
     private ArrayList<ContactRecord> contactList;
+
 
 
     public static ContactsFragment newInstance() {
@@ -46,6 +50,7 @@ public class ContactsFragment extends Fragment {
 
         if(contactList == null){
             contactList = new ArrayList<>();
+            Bitmap defaultImage = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.default_contact);
             ContactRecord record = new ContactRecord("Micheal Kelly", "Oyibi", "JJ Nortey", "Student", "0241", null);
             ContactRecord record2 = new ContactRecord("Johnson Bawa", "Adentan", "JJ Nortey", "Student", "0201", null);
 
@@ -56,6 +61,8 @@ public class ContactsFragment extends Fragment {
         contactAdapter = new ContactAdapter(contactList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(contactAdapter);
+
+
 
         return root;
     }

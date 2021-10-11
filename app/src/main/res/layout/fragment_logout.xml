@@ -3,16 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.logout.LogoutFragment">
+    tools:context=".ui.logout.LogoutFragment"
+    android:background="@drawable/custom_backgrounds">
 
-    <TextView
-        android:id="@+id/txt_logout_prompt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:fontFamily="@font/condiment"
-        android:text="Hello"
-        android:textAlignment="center"
-        android:textSize="35sp" />
+<!--    <ImageView-->
+<!--        android:id="@+id/my_img"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:src="@drawable/mygif" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_logout_prompt"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/my_img"-->
+<!--        android:fontFamily="@font/condiment"-->
+<!--        android:text="Are you sure you want to exit application?"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="35sp" />-->
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/btn_yes"-->
+<!--        android:layout_below="@+id/txt_logout_prompt"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="@string/text_prompt_yes"/>-->
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/btn_no"-->
+<!--        android:layout_below="@+id/btn_yes"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="@string/text_prompt_no"/>-->
 
 </RelativeLayout>

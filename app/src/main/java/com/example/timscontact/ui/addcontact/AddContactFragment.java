@@ -4,6 +4,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -24,6 +27,8 @@ import com.example.timscontact.R;
 import com.example.timscontact.ui.contacts.ContactAdapter;
 import com.example.timscontact.ui.contacts.ContactRecord;
 import com.example.timscontact.ui.contacts.ConvertImage;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,11 +46,13 @@ public class AddContactFragment extends Fragment {
     private TextView number;
     private Button addBtn, cancelBtn, btnAddImg;
     private ImageView displayImage;
+    private NavigationView navigationView;
 
     private static final int PICK_IMAGE_REQUEST = 1;
     private Uri imageFilePath;
     private Bitmap imageToStore;
     private String convertedImage;
+    private Bitmap defaultImage;
 
 
     private ContactAdapter contactAdapter;
@@ -68,6 +75,9 @@ public class AddContactFragment extends Fragment {
         cancelBtn = root.findViewById(R.id.btn_cancel);
         btnAddImg = root.findViewById(R.id.btn_add_img);
         displayImage = root.findViewById(R.id.contact_img);
+        navigationView = getActivity().findViewById(R.id.nav_view);
+        defaultImage = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.contact);
+
 
 
         contactList = PrefConfig.readListFromPref(getContext());
@@ -77,18 +87,31 @@ public class AddContactFragment extends Fragment {
 
 
         addBtn.setOnClickListener(view -> {
-            ContactRecord record = new ContactRecord(
-                    name.getText().toString(),
-                    address.getText().toString(),
-                    email.getText().toString(),
-                    company.getText().toString(),
-                    number.getText().toString(),
-                    convertedImage);
-            contactList.add(record);
-            PrefConfig.writeListInPref(getContext(), contactList);
+
+            if(name.getText().toString().isEmpty() || number.getText().toString().isEmpty()) {
+                Snackbar.make(getView(), "Name and Number feilds are required.", Snackbar.LENGTH_LONG).show();
+            }else{
+                ContactRecord record = new ContactRecord(
+                        name.getText().toString(),
+                        address.getText().toString(),
+                        email.getText().toString(),
+                        company.getText().toString(),
+                        number.getText().toString(),
+                        convertedImage);
+                if(imageToStore == null){
+                    record.setContactImg(ConvertImage.BitMapToString(defaultImage));
+                }
+                contactList.add(record);
+                PrefConfig.writeListInPref(getContext(), contactList);
+                navigationView.getMenu().performIdentifierAction(R.id.nav_contacts, 1);
+            }
+
         });
 
         btnAddImg.setOnClickListener(view -> {
+            chooseImage(view);
+        });
+        displayImage.setOnClickListener(view -> {
             chooseImage(view);
         });
 
@@ -107,7 +130,6 @@ public class AddContactFragment extends Fragment {
         objIntent.setType("image/*");
         objIntent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(objIntent, PICK_IMAGE_REQUEST);
-        System.out.println("Image selected");
     }
 
     @Override
